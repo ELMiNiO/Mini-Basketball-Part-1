@@ -13,7 +13,7 @@ public class GoalParticleEffectDestroyer : MonoBehaviour
         //Note that StartCoroutine should be in Void Start or in a method
         //with conditions
         //DO NOT Put StartCoroutine in void Update, if you put it
-        //in void Update DelayDestruction will get executed without any delay
+        //in void Update DelayDestruction will get executed without any delay every frame
         StartCoroutine(DelayDestruction());
     }
 
