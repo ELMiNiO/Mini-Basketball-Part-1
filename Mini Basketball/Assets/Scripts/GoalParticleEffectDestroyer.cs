@@ -9,24 +9,23 @@ public class GoalParticleEffectDestroyer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(DelayDestruction());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_goldParticleEffectLifeTime > 0)
-        {
-            _goldParticleEffectLifeTime -= Time.deltaTime;
-            if(_goldParticleEffectLifeTime <= 0)
-            {
-                Destruction();
-            }
-        }
+
     }
 
     void Destruction()
     {
         Destroy(this.gameObject);
+    }
+
+    IEnumerator DelayDestruction()
+    {
+        yield return new WaitForSeconds(_goldParticleEffectLifeTime);
+        Destruction();
     }
 }

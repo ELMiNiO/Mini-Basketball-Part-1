@@ -28,23 +28,8 @@ public class Basketball : MonoBehaviour
     {
         if (other.gameObject.tag == "Hoop")
         {
-            _goalSound = GetComponent<AudioSource>();
-            _goalSound.Play(0);
             ParticleEffect();
-            ScoreTrack.score += 1;
-            //Debug.Log("Goal!!!");
-            //Debug.Log(ScoreTrack.score);
-        }
-    }
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            //delay execution of method
-            StartCoroutine("DelayDestruction");
-            //Destruction();
+            Debug.Log("Goal!!!");
         }
     }
 
@@ -54,16 +39,4 @@ public class Basketball : MonoBehaviour
         _goalParticleEffect.Play();
     }
 
-    void Destruction()
-    {
-        Destroy(this.gameObject);
-    }
-
-    //Declaring Ienumerator
-    //Used for delaying execution of method
-    IEnumerator DelayDestruction()
-    {
-        yield return new WaitForSeconds(_ballDestroyDelayTime);
-        Destruction();
-    }
 }

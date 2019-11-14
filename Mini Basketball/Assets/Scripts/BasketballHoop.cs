@@ -11,7 +11,7 @@ public class BasketballHoop : MonoBehaviour
     [SerializeField]
     private Transform _endMarker = default;
     /*
-     * Example of bad implementation setting up movement location Hard coding it
+     * Example of bad implementation setting up movement location by hard coding it
      * Each time you want to change the position
      * you have to come and change it in the script.
      */
@@ -27,19 +27,8 @@ public class BasketballHoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //moving an object back and forth using Verctor3.Lerp
+        //Verctor3.Lerp -> Linearly interpolates between two points.
         transform.position = Vector3.Lerp(_startMarker.position, _endMarker.position, Mathf.PingPong(Time.time * _speed, 1));
-        /*
-         * Example of bad implementation of moving a object between two location
-         */
-        /*
-        if (transform.position.x < 2)
-        {
-            transform.Translate(Vector3.right * _speed * Time.deltaTime);
-        }
-        else if (transform.position.x > somenumber)
-        {
-            transform.Translate(Vector3.left * _speed * Time.deltaTime);
-        }
-        */
     }
 }
