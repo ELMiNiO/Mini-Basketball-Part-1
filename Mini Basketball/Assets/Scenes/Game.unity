@@ -222,6 +222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6175773591145911292, guid: 3738f3a662c0f4af7ab7827d890f8e52,
+        type: 3}
+      propertyPath: m_TagString
+      value: BasketBall
+      objectReference: {fileID: 0}
     - target: {fileID: 7201142024692261359, guid: 3738f3a662c0f4af7ab7827d890f8e52,
         type: 3}
       propertyPath: m_LocalPosition.x

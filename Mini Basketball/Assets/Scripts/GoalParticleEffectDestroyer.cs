@@ -9,6 +9,11 @@ public class GoalParticleEffectDestroyer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Starting DelayDestruction IEnumerator
+        //Note that StartCoroutine should be in Void Start or in a method
+        //with conditions
+        //DO NOT Put StartCoroutine in void Update, if you put it
+        //in void Update DelayDestruction will get executed without any delay
         StartCoroutine(DelayDestruction());
     }
 
@@ -17,12 +22,12 @@ public class GoalParticleEffectDestroyer : MonoBehaviour
     {
 
     }
-
+    //Creating our own custom method
     void Destruction()
     {
         Destroy(this.gameObject);
     }
-
+    //IEnumerator allows to execute method with delay
     IEnumerator DelayDestruction()
     {
         yield return new WaitForSeconds(_goldParticleEffectLifeTime);

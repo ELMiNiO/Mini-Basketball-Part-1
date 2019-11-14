@@ -21,7 +21,12 @@ public class Basketball : MonoBehaviour
 
 
     }
-
+    //Checking Trigger Using unity Tag system
+    /*
+     * If you want to create Tage select your gameobject
+     * In Inspector panel in the top, left side there is section called Tag
+     * Click on it -> Go Add Taggs... then you can create your own custom tags
+     */
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Hoop")
@@ -30,7 +35,7 @@ public class Basketball : MonoBehaviour
             Debug.Log("Goal!!!");
         }
     }
-
+    //Creating our own custom method
     void ParticleEffect()
     {
         Instantiate(_goalParticleEffect);
