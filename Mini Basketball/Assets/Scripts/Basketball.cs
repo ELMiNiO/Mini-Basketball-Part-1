@@ -5,8 +5,6 @@ using UnityEngine;
 public class Basketball : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource _goalSound = default;
-    [SerializeField]
     private ParticleSystem _goalParticleEffect = default;
     [SerializeField]
     private int _ballDestroyDelayTime = 2;
