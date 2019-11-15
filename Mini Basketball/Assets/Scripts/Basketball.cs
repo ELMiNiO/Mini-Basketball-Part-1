@@ -6,8 +6,6 @@ public class Basketball : MonoBehaviour
 {
     [SerializeField]
     private ParticleSystem _goalParticleEffect = default;
-    [SerializeField]
-    private int _ballDestroyDelayTime = 2;
 
     // Start is called before the first frame update
     void Start()
